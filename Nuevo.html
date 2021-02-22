@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="estilos.css">
+   
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h1 class="brand"><a href="Nuevo.html">Pädi <span>né </span>dohni</a></h1>
+                <div class="toggle" onclick="toggleMenu()"></div>
+                <ul class="navigation">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">about</a></li>
+                    <li><a href="">services</a></li>
+                    <li><a href="">Equipo</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    
+    <section>
+        <div class="containerr">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="perritos.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="contentBx">
+                        <a href="Esp/esp.html"  target="_blank"><i><h3>Español <br><span>Creative</span></h3></i></a>
+                        
+                    </div>
+                <ul class="sci">
+                    <li style="--i:1;"><i>1°-2°</i></li>
+                    <li style="--i:2;"><i>3°-4°</i></li>
+                    <li style="--i:3;"><i>4°-5°</i></li>
+                </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="Mirage.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="contentBx">
+                        <a href="Mat/mat.html"  target="_blank"><i><h3>Matemáticas <br><span>Creative</span></h3></i></a>
+                    </div>
+                <ul class="sci">
+                    <li style="--i:1;"><i>1°-2°</i></li>
+                    <li style="--i:2;"><i>3°-4°</i></li>
+                    <li style="--i:3;"><i>4°-5°</i></li>
+                </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="blood.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Donar <br><span>Creative</span></h3>
+                    </div>
+                <ul class="sci">
+                    <li style="--i:1;"><a href="español.html" target="_blank"><i>IR</i></a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+  
+    <footer>
+        <div class="footer-content">
+            <h3>Code</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quia officia a ducimus consequuntur esse minus illum deleniti quisquam voluptate incidunt exercitationem? Dignissimos, necessitatibus quasi voluptatem dolorum deserunt reprehenderit tenetur?</p>
+            <ul class="socials">
+                <li><a href=""><i>Face</i></a></li>
+                <li><a href=""><i>Twit</i></a></li>
+                <li><a href=""><i>YouT</i></a></li>
+                <li><a href=""><i>Pint</i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2021 code <span>Torres</span></p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

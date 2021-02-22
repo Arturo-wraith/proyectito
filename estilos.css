@@ -1,0 +1,331 @@
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding:0;
+    background-image: url("hola.png" );
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+html{
+    font-size: 10px;
+    font-family: "Roboto Cn",sans-serif;
+}
+body{
+    overflow-x:hidden;
+}
+a{
+    text-decoration: none;
+    color:#eee;
+}
+header{
+    width: 100%;
+    height: 20%;
+    background: #010A54;
+}
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin:0 auto;
+    top:5px;
+}
+nav{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    
+}
+.brand{
+    font-size: 4rem;
+    font-weight: 300;
+    transform: translateX(-100rem);
+    animation:slideIn .5s forwards ;
+}
+.brand span{
+    color:crimson;
+}
+nav ul {
+    display:flex;
+}
+nav ul li{
+    list-style: none;
+    transform: translateX(100rem);
+    animation:slideIn .5s forwards ;
+}
+nav ul li:nth-child(1) {
+    animation-delay:0s;
+}
+nav ul li:nth-child(2) {
+    animation-delay:.5s;
+}
+nav ul li:nth-child(3) {
+    animation-delay:1s;
+}
+nav ul li:nth-child(4) {
+    animation-delay:1.5s;
+}
+nav ul li a{
+    padding:1 rem 0;
+    margin: 0 3rem;
+    position: relative;
+}
+nav ul li a:last-child{
+    margin-right: 0;
+}
+nav ul li a::before,
+nav ul li a::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: crimson;
+    left:0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+nav ul li a::before{
+    top:0;
+    transform-origin: left;
+}
+nav ul li a::after{
+    bottom:0;
+    transform-origin: right;
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    transform:scaleX(1);
+}
+@keyframes slideIn{
+    from{
+
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@media(max-width:991px)
+{
+    header{
+        padding:40px
+    }
+    header .navigation{
+        display:none;
+    }
+    header .navigation.active{
+        position: fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:crimson;
+        border-radius: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index:  10;
+    }
+    header .navigation li a {
+        font-size:40px;
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 0;
+        margin:10px 0;
+        font-weight: 1.5em;
+        font-weight: 300;
+    }
+    .toggle{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: url(menu.png);
+        background-size: 50px;
+        background-repeat: no-repeat;
+        background-position:center;
+        cursor:pointer;
+        z-index:  10000;
+    }
+    .toggle.active{
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        right: 40px;
+        background:url(close.png);
+        background-size: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+
+/*Las cartas de presentación*/
+.containerr{
+    
+    justify-content: center;
+    position: relative;
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:40px 0;
+}
+.containerr .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin:20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerr .card .content{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:160px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    flex-direction: column;
+    backdrop-filter: blur(15px);
+    transition: bottom 0.5s;
+    transition-delay: 0.8;
+}
+.containerr .card:hover .content{
+    bottom:10%;
+    box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+    border:1px solid rgba(255,255,255,0.2);
+}
+.containerr .card .content .contentBx h3{
+    color:#e0c633;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin:20px 0 15px;
+    line-height: 1.1em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition-delay: 0.6s;
+}
+.containerr .card:hover .content .contentBx h3{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.containerr .card .content .contentBx h3 span{
+    font-size:12px;
+    font-weight:300;
+    text-transform: initial;
+}
+.containerr .card .content .sci{
+    position: relative;
+    bottom:10px;
+    display:flex;
+}
+.containerr .card .content .sci li{
+    list-style: none;
+    margin:0 10px;
+    transform: translateY(40px);
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: calc(0.2s * var(--i));
+}
+.containerr .card:hover .content .sci li{
+    transform: translateY(0px); 
+    opacity: 1;
+}
+.containerr .card .content .sci li {
+    color:#DD550C;
+    font-size: 24px;
+}
+
+
+
+/*Empieza el footer*/
+footer{
+    position: relative;
+    bottom:0;
+    left:0;
+    right:0;
+    background: #010629;
+    height: auto;
+    width: 100vw;
+    font-family: "Ubuntu";
+    padding-top: 40px;
+    color: #eb2443 ;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin:0 15px;
+}
+.socials a{
+    text-decoration: none;
+    color: #d11414 ;
+}
+.socials a i{
+    font-size:20px;
+    transition: color .4s ease;
+}
+.socials a:hover i {
+    color: #f6a520;
+    font-size: 25px;
+}
+.footer-bottom{
+    background:#02006D;
+    width: 100vw;
+    padding:20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
